@@ -13,6 +13,7 @@ return array(
             'Apcap_mobile\Controller\Mensagem' => 'Apcap_mobile\Controller\MensagensController',
             'Apcap_mobile\Controller\Termos' => 'Apcap_mobile\Controller\TermosController',
             'Apcap_mobile\Controller\Carrinho' => 'Apcap_mobile\Controller\CarrinhoController',
+            'Apcap_mobile\Controller\Cartao' => 'Apcap_mobile\Controller\CartaoController',
         )
     ),
     'router' => array(
