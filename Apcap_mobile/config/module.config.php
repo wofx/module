@@ -342,6 +342,66 @@ return array(
                 )
             ),
             
+            // ROTA Cartao
+            'cartao' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/cartao',
+                    'controller' => 'Cartao'
+                ),
+                'may_terminate' => false,
+                'child_routes' => array(
+            
+                    'listar' => array(
+                        'type' => 'method',
+                        'options' => array(
+                            'verb' => 'get',
+                            'defaults' => array(
+                                '__NAMESPACE__' => 'Apcap_mobile\Controller',
+                                'controller' => 'Cartao',
+                                'action' => 'listar'
+                            )
+                        )
+                    ),
+                    'salvar' => array(
+                        'type' => 'method',
+                        'options' => array(
+                            'verb' => 'post',
+                            'defaults' => array(
+                                '__NAMESPACE__' => 'Apcap_mobile\Controller',
+                                'controller' => 'Cartao',
+                                'action' => 'salvar'
+                            )
+                        )
+                    ),
+                    'editar' => array(
+                        'type' => 'method',
+                        'options' => array(
+                            'verb' => 'put',
+                            'defaults' => array(
+                                '__NAMESPACE__' => 'Apcap_mobile\Controller',
+                                'controller' => 'Cartao',
+                                'action' => 'editar'
+                            )
+                        )
+                    ),
+                    'pesquisarId' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => '/[:id]',
+                            'constraints' => array(
+                                'id' => '[0-9]+'
+                            ),
+            
+                            'defaults' => array(
+                                '__NAMESPACE__' => 'Apcap_mobile\Controller',
+                                'controller' => 'Cartao',
+                                'action' => 'recuperarPorId'
+                            )
+                        )
+                    )
+                )
+            ),
                                                                                        
             
             //next rote
